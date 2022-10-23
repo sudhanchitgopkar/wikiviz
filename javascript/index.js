@@ -69,7 +69,13 @@ function myAdjacencyMap() {
     return apiEndpoint + query;
   } // formURL
   
-  var ogUrl = initialURL("French language");
+  var ogUrl = initialURL("Chinese language");
+
+  function visualize() {
+    var search = document.getElementById('search-field').value;
+    ogUrl = initialURL(search);
+    console.log(ogUrl);
+  }
   
   var ogArticle;
   
