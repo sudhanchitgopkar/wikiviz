@@ -41,7 +41,7 @@ main {
 
 h3 {
     color: white;
-    font-size: 1.25em;
+    font-size: 1.5em;
     line-height: 0.5em;
 }
 
@@ -65,12 +65,14 @@ form {
 
 #search-field {
     border: none;
-    width: 85%;
-    height: 1.5em;
+    width: 75%;
+    height: 2.5em;
     margin-right: 8px;
     border: solid;
     border-color: white;
+    border-radius: 3px;
     background-color: black;
+    font-size: 1.15em;
     color: white;
 }
 
@@ -80,11 +82,13 @@ input::placeholder {
 
 #submit-button {
     cursor: pointer;
-    width: 10%;
-    height: 2em;
+    width: 20%;
+    height: 3em;
     border: solid;
     border-color: white;
+    border-radius: 3px;
     background-color: black;
+    font-size: 1.1em;
     color: white;
 }
 
@@ -121,13 +125,16 @@ input::placeholder {
 }
 
 #about-info {
+    display: block;
     position: absolute;
-    width: 20vw;
-    height: fit-content;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
-    background-color: #2f2f2f;
+    overflow: auto;
+    width: 20em;
+    height: 80vh;
+    margin: -53px 0 0 -50px;
+    padding: 55px 50px 5px 50px;
+    font-size: 2.1vh;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
     color: white;
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
@@ -138,4 +145,8 @@ input::placeholder {
 
 #about-pullout input:checked ~ div {
     transform: none;
+}
+
+#about-pullout ul {
+    margin-top: -1em;
 }
