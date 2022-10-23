@@ -68,10 +68,9 @@ form {
 #search-field {
     border: none;
     width: 75%;
-    height: 2.5em;
+    height: 100%;
     margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 16px;
     border: solid;
     border-color: #dbdbdb;
     border-radius: 5px;
@@ -88,8 +87,9 @@ input::placeholder {
 #submit-button {
     cursor: pointer;
     width: 20%;
-    height: 3em;
+    height: 100%;
     margin-right: 16px;
+    padding: 16px;
     border: solid;
     border-color: #dbdbdb;
     border-radius: 5px;
