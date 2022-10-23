@@ -7,7 +7,7 @@ class Article {
     this.x = 0;
     this.y = 0;
     this.z = 0;
-    this.len = 50; 
+    this.len = 50;
   }
 
   getTitle() {
@@ -72,10 +72,10 @@ function formURL(title, limit) {
 var ogUrl = initialURL("Robert Schneider");
 
 function visualize() {
-    var search = document.getElementById('search-field').value;
-    ogUrl = initialURL(search);
-    console.log(ogUrl);
-  }
+  var search = document.getElementById('search-field').value;
+  ogUrl = initialURL(search);
+  console.log(ogUrl);
+}
 
 
 var ogArticle;
