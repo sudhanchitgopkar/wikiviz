@@ -36,11 +36,11 @@ main {
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: end;
-    margin-left: 16px;
+    margin-left: 8px;
 }
 
 h3 {
-    color: white;
+    color: #dbdbdb;
     font-size: 1.5em;
     line-height: 0.5em;
 }
@@ -68,28 +68,31 @@ form {
     width: 75%;
     height: 2.5em;
     margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
     border: solid;
-    border-color: white;
-    border-radius: 3px;
+    border-color: #dbdbdb;
+    border-radius: 5px;
     background-color: black;
     font-size: 1.15em;
-    color: white;
+    color: #dbdbdb;
 }
 
 input::placeholder {
-    color: white;
+    color: #dbdbdb;
 }
 
 #submit-button {
     cursor: pointer;
     width: 20%;
     height: 3em;
+    margin-right: 16px;
     border: solid;
-    border-color: white;
-    border-radius: 3px;
+    border-color: #dbdbdb;
+    border-radius: 5px;
     background-color: black;
     font-size: 1.1em;
-    color: white;
+    color: #dbdbdb;
 }
 
 #about-pullout {
@@ -119,7 +122,7 @@ input::placeholder {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background-color: white;
+    background-color: #dbdbdb;
     border-radius: 3px;
     z-index: 1;
 }
@@ -129,13 +132,13 @@ input::placeholder {
     position: absolute;
     overflow: auto;
     width: 20em;
-    height: 80vh;
+    height: 75vh;
     margin: -53px 0 0 -50px;
     padding: 55px 50px 5px 50px;
     font-size: 2.1vh;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
-    color: white;
+    color: #dbdbdb;
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
