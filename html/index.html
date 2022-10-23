@@ -1,83 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WikiViz</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+    <script src="https://kit.fontawesome.com/33dfe074ae.js" crossorigin="anonymous"></script>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>WikiVis</title>
-  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
-  <script src="https://kit.fontawesome.com/33dfe074ae.js" crossorigin="anonymous"></script>
+    <script src="../javascript/jquery-3.6.1.js"></script>
+    <script src="../javascript/index.js"></script>
+    <script src="../javascript/viz.js"></script>
+    <script src="../javascript/addScreenPositionFunction.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
 
-  <script src="../javascript/jquery-3.6.1.js"></script>
-  <script src="../javascript/index.js"></script>
-  <script src="../javascript/viz.js"></script>
-  <script src="../javascript/addScreenPositionFunction.js"></script>
-</head>
+  <body>
 
-<body>
-
-  <div id="about-pullout">
-    <input type="checkbox" />
-    <span></span>
-    <span></span>
-    <span></span>
-    <div id="about-info">
-      <h3>About WikiVis</h3>
-      <p>
-        With how data is seen in every facet of life ranging from the connection between Twitch
-        streamers to the amount of showers each CS major partakes in, we hope to create a
-        visualization that allows everyday people to see those connections and create something
-        beautiful from it. There exist many areas where data can be used but one interesting data
-        visualization which we have not seen is the connection between Wikipedia articles. Inspired
-        by games like Wikirace, we are creating a new way, more beautiful to visualize data. And
-        hey, what if we make it crazier and overlay these connections on a 3 dimensional plane?
-      </p>
-      <p>
-        All you have to do is enter the title of the Wikipedia article you are interested in (case
-        sensitive) and click the Visualize button. Then you'll see a graph of articles visualized as
-        spherical nodes, all of which are connected based on how the articles are linked.
-      </p>
-      <p>
-        Application Controls
-      </p>
-      <ul>
-        <li>Spacebar: Play/Pause visualization animation</li>
-        <li>Left/Right Arrow Keys: Navigate between nodes</li>
-        <li>Enter: Go to article corresponding to current node</li>
-        <li>Left Mouse Button: Click and drag to move visualization around</li>
-      </ul>
-      <p>
-        Created by
-      </p>
-      <ul>
-        <li>Sudhan Chitgopkar</li>
-        <li>Kewal Kalsi</li>
-        <li>Chenjun Ren</li>
-        <li>Ethan Tong</li>
-      </ul>
-    </div>
-  </div>
-
-  <main>
-    <div class="grid-container">
-      <div class="grid-item" id="graph-container">
-        <div id="sketchDiv"></div>
-      </div>
-      <div class="grid-item footer-nav" id="title-container">
-        <h3>WikiVis</h3>
-      </div>
-      <div class="grid-item footer-nav" id="search-container">
-        <form action="">
-          <input type="text" placeholder="Insert keyword" id="search-field">
-          <button type="submit" id="submit-button" onsubmit="visualize()">Visualize</button>
-        </form>
+    <div id="about-pullout">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <div id="about-info">
+        <h3>About WikiVis</h3>
+        <p>
+          Have you ever wanted to see how Wikipedia articles connect to each other? Well, now you can! Introducing WikiVis! A new, elegant way to visualize data. In 3D! Enter a word and see where it takes you!
+        </p>
+        <p>
+          All you have to do is enter the title of the Wikipedia article you are interested in (case
+          sensitive) and click the Visualize button. Then you'll see a graph of articles visualized as
+          spherical nodes, all of which are connected based on how the articles are linked.
+        </p>
+        <p>
+          Application Controls
+        </p>
+        <ul>
+          <li>Spacebar: Play/Pause visualization animation</li>
+          <li>Left/Right Arrow Keys: Navigate between nodes</li>
+          <li>Enter: Go to article corresponding to current node</li>
+          <li>Left Mouse Button: Click and drag to move visualization around</li>
+        </ul>
+        <p>
+          Created by
+        </p>
+        <ul>
+          <li>Sudhan Chitgopkar</li>
+          <li>Kewal Kalsi</li>
+          <li>Chenjun Ren</li>
+          <li>Ethan Tong</li>
+        </ul>
       </div>
     </div>
-  </main>
-
-</body>
-
+  
+    <main>
+      <div class="grid-container">
+        <div class="grid-item" id="graph-container">
+          <div id="sketchDiv"></div>
+        </div>
+        <div class="grid-item footer-nav" id="title-container">
+          <h3>WikiVis</h3>
+        </div>
+        <div class="grid-item footer-nav" id="search-container">
+          <form action="">
+            <input type="text" placeholder="Insert keyword" id="search-field">
+            <button type="submit" id="submit-button" onsubmit="visualize()">Visualize</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  
+  </body>
 </html>
