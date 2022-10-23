@@ -7,7 +7,7 @@ body {
 .grid-container {
     display: grid;
     align-items: center;
-    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-template-columns: 10% auto;
     grid-auto-rows: 90vh auto;
 }
 
@@ -27,9 +27,10 @@ body {
     text-align: center;
     justify-content: center;
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: end;
+    margin-left: 16px;
 }
 
 h3 {
@@ -42,11 +43,10 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-column-start: 3;
+    grid-column-start: 2;
     grid-column-end: end;
     grid-row-start: 2;
     grid-row-end: end;
-    
 }
 
 form {
@@ -59,9 +59,11 @@ form {
 
 #search-field {
     border: none;
-    width: 80%;
-    height: 100%;
+    width: 85%;
+    height: 1.5em;
     margin-right: 8px;
+    border: solid;
+    border-color: white;
     background-color: black;
     color: white;
 }
@@ -73,7 +75,7 @@ input::placeholder {
 #submit-button {
     cursor: pointer;
     width: 10%;
-    height: 2rem;
+    height: 2em;
     border: solid;
     border-color: white;
     background-color: black;
