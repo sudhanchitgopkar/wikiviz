@@ -1,14 +1,22 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/source-code-pro.min.css");
+
 body {
     background-color: black;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Source Code Pro', sans-serif;
+}
+
+main {
+    margin-top: -50px;
 }
 
 .grid-container {
     display: grid;
+    top: -50px;
     align-items: center;
     grid-template-columns: 10% auto;
-    grid-auto-rows: 90vh auto;
+    grid-auto-rows: 7fr 1fr;
+    z-index: 0;
 }
 
 #graph-container {
@@ -30,12 +38,12 @@ body {
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: end;
-    margin-left: 16px;
+    margin-left: 8px;
 }
 
 h3 {
-    color: white;
-    font-size: 1.25em;
+    color: #dbdbdb;
+    font-size: 1.5em;
     line-height: 0.5em;
 }
 
@@ -59,25 +67,107 @@ form {
 
 #search-field {
     border: none;
-    width: 85%;
-    height: 1.5em;
+    width: 75%;
+    height: 2.5em;
     margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
     border: solid;
-    border-color: white;
+    border-color: #dbdbdb;
+    border-radius: 5px;
     background-color: black;
-    color: white;
+    font-family: 'Source Code Pro', sans-serif;
+    font-size: 1.15em;
+    color: #dbdbdb;
 }
 
 input::placeholder {
-    color: white;
+    color: #dbdbdb;
 }
 
 #submit-button {
     cursor: pointer;
-    width: 10%;
-    height: 2em;
+    width: 20%;
+    height: 3em;
+    margin-right: 16px;
     border: solid;
-    border-color: white;
+    border-color: #dbdbdb;
+    border-radius: 5px;
     background-color: black;
-    color: white;
+    font-family: 'Source Code Pro', sans-serif;
+    font-size: 1.1em;
+    color: #dbdbdb;
+}
+
+#submit-button:hover {
+    background-color: #dbdbdb;
+    color: black;
+    font-weight: bold;
+}
+
+#about-pullout {
+    display: block;
+    position: relative;
+    width: 30px;
+    top: 25px;
+    left: 25px;
+    z-index: 1;
+}
+
+#about-pullout input {
+    display: block;
+    width: 30px;
+    height: 27px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+#about-pullout span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: #dbdbdb;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+#about-info {
+    display: block;
+    position: absolute;
+    overflow: auto;
+    width: 20em;
+    height: 75vh;
+    margin: -53px 0 0 -50px;
+    padding: 55px 50px 5px 50px;
+    font-size: 2.1vh;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    color: #dbdbdb;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+    -webkit-font-smoothing: antialiased;
+
+    -ms-overflow-style: none;  /* Hide scrollbar in IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar in Firefox */
+}
+
+/* Hide scrollbar in Chrome, Safari, and Opera */
+#about-info::-webkit-scrollbar {
+    display: none;
+}
+
+#about-pullout input:checked ~ div {
+    transform: none;
+}
+
+#about-pullout ul {
+    margin-top: -1em;
 }

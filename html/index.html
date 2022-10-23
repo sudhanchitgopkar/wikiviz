@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WikiVis</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
   </head>
 
   <body>
+
+    <div id="about-pullout">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <div id="about-info">
+        <h3>About WikiVis</h3>
+        <p>
+          With how data is seen in every facet of life ranging from the connection between Twitch 
+          streamers to the amount of showers each CS major partakes in, we hope to create a 
+          visualization that allows everyday people to see those connections and create something 
+          beautiful from it. There exist many areas where data can be used but one interesting data 
+          visualization which we have not seen is the connection between Wikipedia articles. Inspired 
+          by games like Wikirace, we are creating a new way, more beautiful to visualize data. And 
+          hey, what if we make it crazier and overlay these connections on a 3 dimensional plane?
+        </p>
+        <p>
+          All you have to do is enter the title of the Wikipedia article you are interested in (case 
+          sensitive) and click the Visualize button. Then you'll see a graph of articles visualized as 
+          spherical nodes, all of which are connected based on how the articles are linked.
+        </p>
+        <p>
+          Application Controls
+        </p>
+        <ul>
+          <li>Spacebar: Play/Pause visualization animation</li>
+          <li>Left/Right Arrow Keys: Navigate between nodes</li>
+          <li>Enter: Go to article corresponding to current node</li>
+          <li>Left Mouse Button: Click and drag to move visualization around</li>
+        </ul>
+        <p>
+          Created by
+        </p>
+        <ul>
+          <li>Sudhan Chitgopkar</li>
+          <li>Kewal Kalsi</li>
+          <li>Chenjun Ren</li>
+          <li>Ethan Tong</li>
+        </ul>
+      </div>
+    </div>
+
     <main>
       <div class="grid-container">
         <div class="grid-item" id="graph-container">
@@ -21,12 +65,14 @@
         <div class="grid-item footer-nav" id="search-container">
           <form action="">
             <input type="text" placeholder="URL" id="search-field">
-            <button type="submit" id="submit-button">Submit</button>
+            <button type="submit" id="submit-button">Visualize</button>
           </form>
         </div>
       </div>
     </main>
+
 	<script src="javascript/api/index.js"></script>
+
   </body>
 
 </html>
